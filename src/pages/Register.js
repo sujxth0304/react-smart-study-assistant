@@ -1,15 +1,14 @@
+// src/pages/Register.js
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import './Register.css'; // Styling for the Register page
 
 const Register = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [error, setError] = useState('');
-  const navigate = useNavigate();
 
-  const handleRegister = async (e) => {
+  const handleRegister = (e) => {
     e.preventDefault();
 
     if (password !== confirmPassword) {
@@ -17,49 +16,40 @@ const Register = () => {
       return;
     }
 
-    try {
-      // Replace with your actual backend endpoint
-      await axios.post('https://dummyjson.com/users/add', {
-        email,
-        password,
-      });
-
-      navigate('/login'); // Redirect to login after registration
-    } catch (err) {
-      setError('Registration failed');
-    }
+    // Handle registration logic here (e.g., send data to backend)
+    console.log('User registered:', email, password);
   };
 
   return (
-    <div>
+    <div className="register-container">
       <h1>Register</h1>
       {error && <p style={{ color: 'red' }}>{error}</p>}
       <form onSubmit={handleRegister}>
         <div>
           <label>Email:</label>
-          <input 
-            type="email" 
-            value={email} 
-            onChange={(e) => setEmail(e.target.value)} 
-            required 
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
           />
         </div>
         <div>
           <label>Password:</label>
-          <input 
-            type="password" 
-            value={password} 
-            onChange={(e) => setPassword(e.target.value)} 
-            required 
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
           />
         </div>
         <div>
           <label>Confirm Password:</label>
-          <input 
-            type="password" 
-            value={confirmPassword} 
-            onChange={(e) => setConfirmPassword(e.target.value)} 
-            required 
+          <input
+            type="password"
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+            required
           />
         </div>
         <button type="submit">Register</button>
