@@ -1,32 +1,99 @@
-/* src/pages/Dashboard.css */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #27374D;
+  color: #DDE6ED;
+  margin: 0;
+  padding: 0;
+}
+
 .dashboard-container {
-    text-align: center;
-    padding: 20px;
-    background-color: #f0f0f0;
-  }
-  
-  h1 {
-    font-size: 3rem;
-    color: #333;
-  }
-  
-  p {
-    font-size: 1.5rem;
-    margin-top: 20px;
-  }
-  
-  .logout-button {
-    font-size: 1.2rem;
-    color: white;
-    background-color: #dc3545;
-    padding: 10px 20px;
-    margin-top: 30px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .logout-button:hover {
-    background-color: #c82333;
-  }
-  
+  text-align: center;
+  padding: 20px;
+  background-color: #526D82;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  color: #DDE6ED;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #DDE6ED;
+  margin-top: 10px;
+}
+
+.study-plans {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.study-plan {
+  background-color: #9DB2BF;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  width: 300px;
+  transition: transform 0.2s;
+}
+
+.study-plan:hover {
+  transform: translateY(-5px);
+}
+
+.study-plan h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  color: #27374D;
+  margin-bottom: 10px;
+}
+
+.study-plan p {
+  font-size: 1rem;
+  color: #27374D;
+  margin-bottom: 10px;
+}
+
+.logout-button {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  color: #27374D;
+  background-color: #DDE6ED;
+  padding: 10px 20px;
+  margin-top: 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.logout-button:hover {
+  background-color: #9DB2BF;
+  color: #DDE6ED;
+}
+
+button {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  color: #27374D;
+  background-color: #DDE6ED;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #9DB2BF;
+  color: #DDE6ED;
+}

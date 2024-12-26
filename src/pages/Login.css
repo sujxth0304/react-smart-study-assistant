@@ -1,0 +1,58 @@
+.login-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #27374D;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    margin: 40px auto;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    color: #DDE6ED;
+  }
+  
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #526D82;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px; /* Add rounded edges to the form */
+  }
+  
+  label {
+    display: block;
+    font-size: 1.1rem;
+    color: #DDE6ED;
+    margin-top: 10px;
+  }
+  
+  input {
+    width: calc(100% - 22px); /* Adjust width to fit within the form */
+    padding: 10px;
+    font-size: 1rem;
+    margin-top: 5px;
+    margin-bottom: 20px; /* Increase bottom margin for even spacing */
+    border: 1px solid #9DB2BF;
+    border-radius: 5px;
+    background-color: #9DB2BF;
+    color: #27374D;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #DDE6ED;
+    color: #27374D;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    margin-top: 25px; /* Add top margin for even spacing */
+  }
+  
+  button:hover {
+    background-color: #9DB2BF;
+    color: #DDE6ED;
+  }
