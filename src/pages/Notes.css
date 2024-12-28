@@ -1,0 +1,195 @@
+.notes-container {
+  display: flex;
+  height: 100vh;
+  background-color: #f5f6f8;
+  margin: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.notes-sidebar {
+  width: 250px;
+  background-color: #ffffff;
+  border-right: 1px solid #e0e0e0;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.new-note-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #4299e1;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.new-note-btn:hover {
+  background-color: #3182ce;
+}
+
+.notes-list {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.note-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  background-color: #f8f9fa;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  color: #27374D;  /* Changed from #DDE6ED to darker color */
+}
+
+.note-item:hover {
+  background-color: #e2e8f0;
+}
+
+.note-item.active {
+  background-color: #ebf8ff;
+  border-left: 3px solid #4299e1;
+}
+
+.note-title {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.delete-note-btn {
+  background: none;
+  border: none;
+  color: #666666;  /* Changed from #DDE6ED to darker color */
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0 0.5rem;
+}
+
+.note-editor {
+  flex: 1;
+  padding: 20px;
+  background-color: #ffffff;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.note-title-input {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.5rem;
+  border: none;
+  border-bottom: 2px solid #e0e0e0;
+  margin-bottom: 20px;
+  font-weight: bold;
+  background-color: transparent;
+  color: #27374D;  /* Added explicit text color */
+}
+
+.no-note-selected {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #27374D;
+  font-size: 1.2rem;
+}
+
+/* Quill Editor Customization */
+.ql-container {
+  flex: 1;
+  font-size: 1rem;
+  background-color: white;
+  border-radius: 0 0 5px 5px;
+}
+
+.ql-toolbar {
+  background-color: white;
+  border-radius: 5px 5px 0 0;
+}
+
+.ql-editor {
+  min-height: 100%;
+}
+
+.editor-menu {
+  display: flex;
+  gap: 5px;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+.menu-button {
+  padding: 8px;
+  background: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #4a5568;
+}
+
+.menu-button:hover {
+  background-color: #e2e8f0;
+}
+
+.menu-button.is-active {
+  color: #4299e1;
+  background-color: #ebf8ff;
+}
+
+.divider {
+  width: 1px;
+  height: 24px;
+  background-color: #e0e0e0;
+  margin: 0 5px;
+}
+
+.heading-select {
+  padding: 6px;
+  border-radius: 4px;
+  border: 1px solid #e0e0e0;
+  background-color: white;
+}
+
+.ProseMirror {
+    min-height: 300px;
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+    background-color: white; /* Editor background */
+    color: black; /* Ensure text is black */
+  }
+  
+  .ProseMirror:focus {
+    outline: none;
+    border-color: #4299e1;
+  }
+
+/* Add styles for placeholder text */
+.ProseMirror p.is-editor-empty:first-child::before {
+  color: #adb5bd;
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
+}
+
+[style*="font-size"] {
+    font-size: inherit;
+  }
+  
